@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前田プロオンラインスイングレッスン | 3ヶ月でマイナス10打</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #FAFAFA;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 .highlight-minus {
+            text-decoration: underline;
+            text-decoration-color: #FFC107;
+            text-decoration-thickness: 4px;
+        }
+
+        .hero h1 .highlight-stable {
+            color: #FFC107;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+
+        .hero .highlight-thousand {
+            text-decoration: underline;
+            text-decoration-color: #FFC107;
+            text-decoration-thickness: 3px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #FFC107;
+            color: #333;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
+        }
+
+        /* 共感パート */
+        .empathy {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .empathy h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2E7D32;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .empathy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .empathy-intro {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        .pain-points {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .pain-points li {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pain-points li::before {
+            content: '⛳';
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #4CAF50;
+        }
+
+        .bridge-text {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #2E7D32;
+            font-weight: 600;
+            background: #F1F8E9;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .bridge-text .highlight-advice {
+            text-decoration: underline;
+            text-decoration-color: #4CAF50;
+            text-decoration-thickness: 3px;
+            color: #2E7D32;
+            font-weight: 700;
+        }
+         .bridge-text .highlight-quality {
+            color: #F44336;
+            font-weight: bold;
+            font-size: 1.1em;
+       }
+        .empathy-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 解決の根拠 */
+        .solution {
+            padding: 80px 0;
+            background: #F1F8E9;
+        }
+
+        .solution h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2E7D32;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .solution-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .solution-card .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .solution-card h3 {
+            font-size: 1.5rem;
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .solution-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .solution-card .highlight-10min {
+            color: #F44336;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .solution-cta {
+            text-align: center;
+        }
+
+        /* 料金プラン */
+        .pricing {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .pricing h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2E7D32;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .pricing-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-table {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .pricing-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pricing-table th {
+            background: #2E7D32;
+            color: white;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .pricing-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1rem;
+        }
+
+        .pricing-table .premium {
+            position: relative;
+        }
+
+        .pricing-table .premium-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #FFC107;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .pricing-table .price-highlight {
+            color: #F44336;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* 比較表 */
+        .comparison {
+            padding: 80px 0;
+            background: #F1F8E9;
+        }
+
+        .comparison h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2E7D32;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: #2E7D32;
+            color: white;
+            padding: 20px 15px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table .our-service {
+            background: #E8F5E8;
+            font-weight: 600;
+            color: #2E7D32;
+        }
+
+        .comparison-table .competitor {
+            background: #F5F5F5;
+            color: #666;
+        }
+
+        .comparison-table .highlight-zero {
+            color: #F44336;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .comparison-table .highlight-10min {
+            color: #F44336;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .comparison-table .highlight-tour-pro {
+            color: #2E7D32;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* 月2回の理由 */
+        .reason {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .reason-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #FFF9C4;
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 5px solid #FFC107;
+        }
+
+        .reason-box h3 {
+            font-size: 1.8rem;
+            color: #F57F17;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .reason-box h3::before {
+            content: '💡';
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .reason-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .reason-box .highlight-immediate {
+            color: #F44336;
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: #F44336;
+        }
+
+        .reason-box .highlight-effective {
+            color: #2E7D32;
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: #2E7D32;
+        }
+
+        .reason-box .highlight-no-waste {
+            color: #FF6F00;
+            font-weight: 600;
+        }
+
+        /* サービスの流れ */
+        .flow {
+            padding: 80px 0;
+            background: #F1F8E9;
+        }
+
+        .flow h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2E7D32;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .flow-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .flow-step {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .flow-step .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4CAF50;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .flow-step h3 {
+            font-size: 1.3rem;
+            color: #2E7D32;
+            margin: 20px 0 15px;
+            font-weight: 600;
+        }
+
+        .flow-step p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 実績・信頼感 */
+        .credentials {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .credentials h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2E7D32;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .credentials-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .profile {
+            background: #F1F8E9;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .profile h3 {
+            font-size: 1.8rem;
+            color: #2E7D32;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile h3::before {
+            content: '🏌️‍♂️';
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .profile-image {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border: 4px solid #4CAF50;
+        }
+
+        .profile ul {
+            list-style: none;
+        }
+
+        .profile li {
+            padding: 8px 0;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .profile li::before {
+            content: '✅';
+            margin-right: 10px;
+        }
+
+        .testimonials h3 {
+            font-size: 1.8rem;
+            color: #2E7D32;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonials h3::before {
+            content: '📣';
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .testimonial {
+            background: #E8F5E8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            color: #2E7D32;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: #F1F8E9;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2E7D32;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            background: #2E7D32;
+            color: white;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            color: #333;
+            line-height: 1.7;
+            background: white;
+        }
+
+        .faq-answer .highlight-time {
+            color: #F44336;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* 無料特典 */
+        .bonus {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .bonus h2 {
+            font-size: 2.5rem;
+            color: #2E7D32;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .bonus .limited {
+            color: #F44336;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .bonus-content {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #FFF9C4;
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px dashed #FFC107;
+        }
+
+        .bonus-content .video-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .bonus-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* クロージング */
+        .closing {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .closing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .closing-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .closing p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .closing .benefits {
+            list-style: none;
+            margin: 40px 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .closing .benefits li {
+            padding: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .closing .benefits li::before {
+            content: '✅';
+            margin-right: 10px;
+        }
+
+        .closing .final-cta {
+            margin-top: 40px;
+        }
+
+        .closing .cta-button {
+            font-size: 1.4rem;
+            padding: 20px 50px;
+        }
+                /* 固定LINEボタン */
+        .fixed-line-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #00B900;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 185, 0, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .credentials-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .comparison-table table,
+            .pricing-table table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td,
+            .pricing-table th,
+            .pricing-table td {
+                padding: 10px 8px;
+            }
+
+            .solution-cards,
+            .flow-steps {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem !important;
+            }
+
+            .pricing-table .premium-badge {
+                top: -8px;
+                right: 10px;
+                padding: 3px 8px;
+                font-size: 0.7rem;
+            }
+        }
+
+        /* アニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .solution-card,
+        .flow-step,
+        .testimonial {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><span class="highlight-minus">3ヶ月でマイナス10打</span>。<br><span class="highlight-stable">90台安定</span>への最短ルート</h1>
+                <p class="subtitle">もう「なぜ上達しないのか」で悩まない。最短ルートで90台安定へ導きます</p>
+                <p class="description">
+                    ツアープロが<span class="highlight-thousand">1000人以上</span>を指導してきた経験から生まれた、<br>
+                    あなた専用のスイング改善プログラム。<br>
+                    練習場で困った瞬間に、LINEで相談できる革新的なサービスです。
+                </p>
+                <a href="#" class="cta-button">LINEで相談してみる</a>
+            </div>
+        </div>
+    </section>
+
+  <!-- 共感パート -->
+<section class="empathy">
+    <div class="container">
+        <h2>練習すればするほど、何が正しいかわからなくなっていませんか？</h2>
+      <div class="empathy-image">
+      <img src="images/maeda-pro.jpg.jpg" alt="前田プロ" style="max-width:100%; height:auto;">
+    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">※前田プロの写真</p>
+</div>
+
+        <div class="empathy-content">
+            <p class="empathy-intro">週に1回は練習場に通っているのに、こんな経験ありませんか？</p>
+            <ul class="pain-points">
+                <li>「あと少しで100切れそう」がもう何ヶ月も続いている</li>
+                <li>練習場で「これで合ってるのかな？」と不安になる</li>
+                <li>YouTubeや雑誌の情報を試しても、逆に混乱してしまう</li>
+                <li>同じミスを繰り返してしまい、原因がわからない</li>
+                <li>レッスンに通いたいけど、時間もお金も厳しい</li>
+                <li>練習後に「今日は何を改善できたんだろう？」と疑問に思う</li>
+            </ul>
+            <div class="bridge-text">
+                 こうした悩みは、真剣にゴルフに取り組む人ほど感じるものです。<br>
+                実は、練習の<span class="highlight-quality">「量」</span>ではなく<span class="highlight-quality">「質」</span>と<span class="highlight-quality">「タイミング」</span>が重要なんです。<br><br>
+                もし<span class="highlight-advice">その場で適切なアドバイス</span>がもらえたら、<br>
+                あなたの練習は今日から変わります。
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- 解決の根拠 -->
+    <section class="solution">
+        <div class="container">
+            <h2>なぜマイナス10打が実現できるのか？</h2>
+            <div class="solution-cards">
+                <div class="solution-card">
+                    <div class="icon">📊</div>
+                    <h3>1000人の指導データで瞬時に診断</h3>
+                    <p>スコア90〜100で停滞する原因は、実は7つのパターンに分類できます。あなたのスイング動画を見れば、どのパターンか瞬時に判断できます。</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">🏆</div>
+                    <h3>プロが実践した本物のドリル</h3>
+                    <p>研修生時代からツアープロとして実際に使ってきた「結果が出る」ドリルのみを厳選。あなたの課題に合わせて、最も効果的なドリルを1個に絞って提案します。</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">⚡</div>
+                    <h3>練習場でその場解決</h3>
+                    <p>平均返信時間約20分、<span class="highlight-10min">最短10分</span>で返信。記憶が鮮明なうちに修正指導を受けられるため、通常の何倍ものスピードで改善が進みます。</p>
+                </div>
+            </div>
+            <div class="solution-cta">
+                <a href="#" class="cta-button">LINEで相談してみる</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金プラン -->
+    <section class="pricing">
+        <div class="container">
+            <h2>月2回の相談で、迷いのない練習を。</h2>
+            <p class="pricing-intro">
+                前田プロのオンラインスイングレッスンは、LINEだけで完結する新しいレッスンサービスです。<br>
+                困ったときにすぐ相談でき、効率的に上達するために「必要十分なペース」として月2回の相談を基本としています。
+            </p>
+            <div class="pricing-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>プラン名</th>
+                            <th>内容</th>
+                            <th class="premium">月額料金</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ベーシック</strong></td>
+                            <td>月2回のLINE相談</td>
+                            <td><strong class="price-highlight">2,000円（税込）</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="premium">
+                                <strong>プレミアム</strong>
+                                <span class="premium-badge">おすすめ</span>
+                            </td>
+                            <td>月2回のLINE相談＋骨格分析</td>
+                            <td><strong class="price-highlight">3,000円（税込）</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 比較表 -->
+    <section class="comparison">
+        <div class="container">
+            <h2>他のレッスンとは、ここが違う。だから選ばれています。</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th class="our-service">当社</th>
+                            <th class="competitor">A社</th>
+                            <th class="competitor">B社</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>料金</strong></td>
+                            <td class="our-service">入会金<span class="highlight-zero">0円</span><br>月額2,000円〜</td>
+                            <td class="competitor">入会金5,000円<br>月額8,800円〜</td>
+                            <td class="competitor">入会金10万円<br>月額2万円</td>
+                        </tr>
+                        <tr>
+                            <td><strong>返信速度</strong></td>
+                            <td class="our-service">最短<span class="highlight-10min">10分</span><br>平均20分<br>24時間以内に必ず返信！</td>
+                            <td class="competitor">数時間<br>24時間以内に原則返信</td>
+                            <td class="competitor">原則即日<br>3日以内に返信</td>
+                        </tr>
+                        <tr>
+                            <td><strong>回数</strong></td>
+                            <td class="our-service">月に2回</td>
+                            <td class="competitor">無制限</td>
+                            <td class="competitor">無制限</td>
+                        </tr>
+                        <tr>
+                            <td><strong>指導者</strong></td>
+                            <td class="our-service"><span class="highlight-tour-pro">現役ツアープロ監修</span></td>
+                            <td class="competitor">レッスンプロ監修</td>
+                            <td class="competitor">ゴルフレッスンコーチ監修</td>
+                        </tr>
+                        <tr>
+                            <td><strong>サポート体制</strong></td>
+                            <td class="our-service">返信専門スタッフ常駐</td>
+                            <td class="competitor">24時間受付可能など</td>
+                            <td class="competitor">専属コーチの設置など</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 月2回の理由 -->
+    <section class="reason">
+        <div class="container">
+            <div class="reason-box">
+                <h3>なぜ月2回なのか？</h3>
+                <p>多くのゴルファーは、練習の中で出てくる疑問や迷いを、<span class="highlight-immediate">その場ですぐに解決したい</span>と感じています。特に、ゴルフ練習場での相談がほとんどなので、すぐに返信できる体制のほうが効率的です。</p>
+                <p>このサービスでは、必要なタイミングで的確なアドバイスが受けられるよう、<span class="highlight-no-waste">無駄に回数を増やすのではなく</span>、<span class="highlight-effective">最も結果につながりやすい</span>「月2回」に設計しています。</p>
+                <p>また、指示する練習ドリルは1回で完結するものではなく、しっかり取り組むことで効果が出るため、月2回の進捗確認が最適なペースです。</p>
+            </div>
+        </div>
+    </section>
+
+<!-- サービスの流れ -->
+<section class="flow">
+    <div class="container">
+        <h2>簡単3ステップで、あなたの練習が結果につながる。</h2>
+        <p class="flow-intro">
+            練習場で困ったとき、その場で相談できるのが、このサービスの最大の強みです。<br>
+            無駄のない3ステップで、必要なタイミングに、必要なアドバイスをお届けします。<br>
+            この流れで、最短ルートで上達への道を進みましょう。
+        </p>
+        <div class="flow-steps">
+            <div class="flow-step">
+                <div class="step-number">1</div>
+                <h3>LINEで登録</h3>
+                <p>まずは専用のLINEアカウントに友だち登録。簡単な質問にお答えいただき、あなたの現在のレベルと目標を教えてください。</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-number">2</div>
+                <h3>スイング動画を送る</h3>
+                <p>練習場やご自宅で撮影したスイング動画をLINEで送信。横からの撮影がベストですが、撮り方もサポートします。</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-number">3</div>
+                <h3>前田プロ監修のアドバイスが最短10分で届く</h3>
+                <p>あなたの課題を分析し、最も効果的なドリルを1つに絞って提案。無駄なく的確な練習で確実に上達できます。</p>
+            </div>
+        </div>
+
+        <!-- 横型動画 -->
+        <div class="flow-video" style="margin-top: 40px; text-align: center;">
+            <div class="video-placeholder" style="background: #eee; width: 800px; max-width: 100%; height: 450px; display: inline-flex; align-items: center; justify-content: center; color: #666; font-size: 1.2rem; border-radius: 8px;">
+                横型動画がここに入ります（800x450px推奨）
+            </div>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">※実際の動画に差し替え予定</p>
+        </div>
+    </div>
+</section>
+
+<!-- 前田プロのプロフィール -->
+<section class="credentials">
+    <div class="container">
+        <div class="credentials-content">
+            <div class="profile">
+                <div class="profile-image">
+                 <img src="images/maeda2-pro.jpg.jpg" alt="前田プロ" style="max-width:100%; height:auto;">
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">※前田プロの写真に差し替え予定</p>
+                </div>
+                <h3>前田倫志 プロフィール</h3>
+                <ul>
+                    <li>10歳からゴルフを始め、1年以内にスコア70台を達成</li>
+                    <li>高校時代に国体個人優勝、全国大会出場</li>
+                    <li>2014年プロテスト合格</li>
+                    <li>中部オープンや各地のオープン大会に出場</li>
+                    <li>研修生時代から6年以上のレッスン経験</li>
+                    <li>これまでに1000人以上を直接指導し、多くのゴルファーの上達をサポート</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- お客様の声 -->
+<section class="testimonials">
+    <div class="container">
+        <h2>お客様の声</h2>
+        <div class="credentials-content">
+            <div class="testimonial">
+                <div class="author">Aさん（50代）</div>
+                <p>レッスンを2回ほど受けて、普段パーも取れなかったのがバーディーを取ることができました。スコアが13縮みました！</p>
+            </div>
+            <div class="testimonial">
+                <div class="author">Bさん（70代）</div>
+                <p>ドライバーがなかなか飛ばなかったのですが、レッスンを2カ月ほど受けたら10ヤード伸びました。これだけで平均スコアが5縮まりました。</p>
+            </div>
+            <div class="testimonial">
+                <div class="author">Cさん</div>
+                <p>レッスンを受けて2カ月目で100切りを達成しました。平均110ほどだったのですが、スイングの根本の悪い部分が分かり、練習も取り組みやすかったです。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>よくある質問にお答えします</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q. なぜこんなに料金が安いのですか？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        無駄なコストを徹底的に省き、上達に必要な要素だけを提供しているためです。月に2回の相談に絞ることで、無駄な時間や料金を抑えつつ、効率的に成果が出る設計にしています。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q. 月2回で本当に効果が出るのでしょうか？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        提供させていただく練習ドリルを行っていただければ月2回でも十分に効果を感じていただけます。ただし練習ドリルは、1回やってすぐに結果が出るものではありません。ドリルにしっかり取り組み、月に2回進捗を確認するのが最も効率的な練習方法です。もし「月3回以上相談したい！」という場合は、LINEで個別にご相談ください。柔軟に対応いたします。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q. スイング動画はどうやって撮ればいいですか？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        スマートフォンで撮影した動画でOKです。なるべく後ろからではなく、横から撮影していただくとアドバイスしやすくなります。撮り方の例もご案内しますのでご安心ください。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q. 返信はどのくらいの時間で来ますか？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        営業時間は <span class="highlight-time">9:00〜21:00</span> です。その時間内であれば、平均して約20分ほどで返信しています。混み合う時間帯は多少お時間をいただく場合もございますが、24時間以内には必ず返信いたします。営業時間外のご連絡は翌営業日の対応になりますのでご了承ください。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q. 途中で解約することはできますか？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        はい、いつでも可能です。必要なタイミングだけご利用ください。
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 60px; text-align: center;">
+                <div style="background: white; padding: 40px; border-radius: 15px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2E7D32; font-size: 1.8rem; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 2rem; margin-right: 15px;">📣</span>
+                        モニター体験者の声
+                    </h3>
+                    <div style="background: #E8F5E8; padding: 20px; border-radius: 10px; margin-bottom: 15px; border-left: 4px solid #4CAF50;">
+                        <p style="color: #333; line-height: 1.6; margin: 0;">「動画を送ったらすぐに返信が来て、練習場で悩んでいたことがその場で解決できました！」</p>
+                    </div>
+                    <div style="background: #E8F5E8; padding: 20px; border-radius: 10px; border-left: 4px solid #4CAF50;">
+                        <p style="color: #333; line-height: 1.6; margin: 0;">「LINEで相談できるから、わざわざレッスンに通うよりも気楽で続けやすいです。」</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 無料特典 -->
+    <section class="bonus">
+        <div class="container">
+            <div class="limited">期間限定特典！</div>
+            <h2>今ならオープン記念で無料で前田プロのおすすめレッスン動画をプレゼント！</h2>
+            <div class="bonus-content">
+                <div class="video-icon">🎥</div>
+                <p>期間限定で、ゴルフスコア90〜100で停滞している方向けに、前田プロ厳選の「おすすめ練習動画集」を無料配布します。</p>
+                <p><strong>LINE登録後、自動返信ですぐにお送りします！</strong></p>
+                <a href="#" class="cta-button">今すぐ無料動画をもらう</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- クロージング -->
+    <section class="closing">
+        <div class="container">
+            <h2>たった1本の動画が、あなたのゴルフを変えるかもしれません。</h2>
+            <div class="closing-content">
+                <p>週に何度も練習しても結果が出なかったのは、原因が分からず、正しい練習ができていなかったからかもしれません。</p>
+                <p>前田プロのオンラインスイングレッスンなら、</p>
+                <ul class="benefits">
+                    <li>困ったときにすぐ相談できる</li>
+                    <li>的確なドリルで最短ルートを進められる</li>
+                    <li>月2回で無駄なく続けられる</li>
+                    <li>LINEだけで簡単に完結</li>
+                </ul>
+                <p>これまでに1000人以上をサポートしてきた経験で、あなたの練習が「結果につながる練習」に変わります。</p>
+                <p><strong>まずは一歩、踏み出してみませんか？</strong></p>
+                <div class="final-cta">
+                    <a href="#" class="cta-button">今すぐLINEで始める</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 固定LINEボタン -->
+    <a href="#" class="fixed-line-button" id="fixedLineButton">LINE登録はこちら</a>
+
+    <script>
+        // FAQ アコーディオン機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = this.querySelector('span');
+                    
+                    // 他のFAQを閉じる
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== this) {
+                            const otherItem = otherQuestion.parentElement;
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherQuestion.querySelector('span');
+                            
+                            otherAnswer.style.display = 'none';
+                            otherIcon.textContent = '+';
+                        }
+                    });
+                    
+                    // 現在のFAQをトグル
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                        icon.textContent = '+';
+                    } else {
+                        answer.style.display = 'block';
+                        icon.textContent = '−';
+                    }
+                });
+            });
+            
+            // 初期状態でFAQを閉じる
+            const faqAnswers = document.querySelectorAll('.faq-answer');
+            faqAnswers.forEach(answer => {
+                answer.style.display = 'none';
+            });
+        });
+
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // CTAボタンのクリックイベント（実際のLINEリンクに変更してください）
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                // 実際のLINE Add Friendリンクに変更してください
+                // window.open('https://line.me/R/ti/p/@your-line-id', '_blank');
+                alert('LINEリンクを設定してください');
+            });
+        });
+    </script>
+</body>
+</html>
