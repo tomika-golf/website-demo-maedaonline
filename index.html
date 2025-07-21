@@ -24,89 +24,142 @@
             padding: 0 20px;
         }
 
-        /* ヒーローセクション */
-        .hero {
-            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+/* ヒーローセクション */
+.hero {
+    background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-            opacity: 0.2;
-            z-index: 1;
-        }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    opacity: 0.2;
+    z-index: 1;
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
 
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
 
-        .hero h1 .highlight-minus {
-            text-decoration: underline;
-            text-decoration-color: #FFC107;
-            text-decoration-thickness: 4px;
-        }
+.hero h1 .highlight-minus {
+    text-decoration: underline;
+    text-decoration-color: #FFC107;
+    text-decoration-thickness: 4px;
+}
 
-        .hero h1 .highlight-stable {
-            color: #FFC107;
-            font-weight: 900;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-        }
+.hero h1 .highlight-stable {
+    color: #FFC107;
+    font-weight: 900;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
 
-        .hero .highlight-thousand {
-            text-decoration: underline;
-            text-decoration-color: #FFC107;
-            text-decoration-thickness: 3px;
-        }
+.hero .highlight-thousand {
+    text-decoration: underline;
+    text-decoration-color: #FFC107;
+    text-decoration-thickness: 3px;
+}
 
-        .hero .subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 40px;
-            font-weight: 500;
-        }
+.hero .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
 
-        .hero .description {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.hero .description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .cta-button {
-            display: inline-block;
-            background: #FFC107;
-            color: #333;
-            padding: 18px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
-        }
+.cta-button {
+    display: inline-block;
+    background: #FFC107;
+    color: #333;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+}
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
-        }
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
+}
+
+.service-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 1em;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    line-height: 1.4;
+}
+
+/* 10打縮める部分を強調する */
+.service-title .highlight-ten {
+    color: #fff5b7; /* 柔らかい淡いレモンイエロー */
+    display: block; /* 改行を維持 */
+    font-size: 1.8rem;
+    margin-top: 0.3em;
+}
+
+/* サブタイトルの既存定義 */
+.service-subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #fffacd; /* レモン色（背景緑に映える） */
+    margin-bottom: 1em;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .service-title {
+        font-size: 1.8rem;
+        padding: 0.3em 0.5em;
+    }
+
+    .service-title .highlight-ten {
+        font-size: 1.2rem;
+    }
+
+    .service-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
 
         /* 共感パート */
         .empathy {
@@ -245,80 +298,135 @@
             text-align: center;
         }
 
-        /* 料金プラン */
-        .pricing {
-            padding: 80px 0;
-            background: white;
-        }
+/* 料金プラン全体 */
+.pricing {
+    padding: 80px 0;
+    background: white;
+}
 
-        .pricing h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            color: #2E7D32;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
+.pricing h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2E7D32;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
 
-        .pricing-intro {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 60px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.pricing-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .pricing-table {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
+/* テーブル */
+.pricing-table {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
-        .pricing-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
 
-        .pricing-table th {
-            background: #2E7D32;
-            color: white;
-            padding: 20px;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
+.pricing-table th {
+    background: #2E7D32;
+    color: white;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
 
-        .pricing-table td {
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-            font-size: 1.1rem;
-        }
+.pricing-table td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+    word-wrap: break-word;
+}
 
-        .pricing-table .premium {
-            position: relative;
-        }
+/* プレミアム */
+.pricing-table .premium {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* ← 常に縦並びにする */
+    align-items: center;
+    justify-content: center;
+}
 
-        .pricing-table .premium-badge {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: #FFC107;
-            color: #333;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
+.pricing-table .premium strong {
+    margin-right: 0;
+    margin-bottom: 4px;
+}
 
-        .pricing-table .price-highlight {
-            color: #F44336;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
+/* おすすめバッジ */
+.pricing-table .premium-badge {
+    background: #FFC107;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* 月額料金 */
+.pricing-table .price-highlight {
+    color: #F44336;
+    font-weight: bold;
+    font-size: 1.2em;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* 月額料金列の調整 */
+.pricing-table th:last-child,
+.pricing-table td:last-child {
+    max-width: 120px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* 600px以下 */
+@media (max-width: 600px) {
+    .pricing-table td:last-child {
+        font-size: 1rem;
+    }
+
+    .pricing-table .premium-badge {
+        font-size: 0.8rem;
+        padding: 3px 10px;
+        margin-top: 4px;
+    }
+}
+
+/* 400px以下 */
+@media (max-width: 400px) {
+    .pricing-table .premium-badge {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+
+    .pricing-table td:last-child {
+        font-size: 0.9rem;
+    }
+
+    .pricing-table th:last-child,
+    .pricing-table td:last-child {
+        max-width: none;
+        white-space: normal;
+    }
+}
+
 
         /* 比較表 */
         .comparison {
@@ -853,10 +961,22 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1><span class="highlight-minus">3ヶ月でマイナス10打</span>。<br><span class="highlight-stable">90台安定</span>への最短ルート</h1>
+
+                <!-- サービス名とサブタイトル -->
+           <h1 class="service-title">
+  前田式スコアメソッド<br><span class="highlight-ten">― 10打縮める、その理由がある。</span>
+</h1>
+
+
+              <h1>
+  <span class="highlight-minus">3ヶ月でマイナス10打</span>。<br>
+  <span class="highlight-stable">90台安定</span>への最短ルート<br>
+  <span style="color:white;">LINEですべて完結</span>
+</h1>
+
                 <p class="subtitle">もう「なぜ上達しないのか」で悩まない。最短ルートで90台安定へ導きます</p>
                 <p class="description">
-                    ツアープロが<span class="highlight-thousand">1000人以上</span>を指導してきた経験から生まれた、<br>
+                    現役ツアープロが<span class="highlight-thousand">1000人以上</span>を指導してきた経験から生まれた、<br>
                     あなた専用のスイング改善プログラム。<br>
                     練習場で困った瞬間に、LINEで相談できる革新的なサービスです。
                 </p>
@@ -870,7 +990,7 @@
     <div class="container">
         <h2>練習すればするほど、何が正しいかわからなくなっていませんか？</h2>
       <div class="empathy-image">
-      <img src="images/maeda-pro.jpg" alt="前田プロ" style="max-width:100%; height:auto;">
+      <img src="images/maeda-pro.jpg.jpg" alt="前田プロ" style="max-width:100%; height:auto;">
     <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">※前田プロの写真</p>
 </div>
 
@@ -903,7 +1023,7 @@
                 <div class="solution-card">
                     <div class="icon">📊</div>
                     <h3>1000人の指導データで瞬時に診断</h3>
-                    <p>スコア90〜100で停滞する原因は、実は7つのパターンに分類できます。あなたのスイング動画を見れば、どのパターンか瞬時に判断できます。</p>
+                    <p>スコア90〜100で停滞する原因は、実は7つのパターンに分類できます。あなたのスイング動画を見れば、どのパターンか瞬時に判断が可能です。</p>
                 </div>
                 <div class="solution-card">
                     <div class="icon">🏆</div>
@@ -924,40 +1044,41 @@
 
     <!-- 料金プラン -->
     <section class="pricing">
-        <div class="container">
-            <h2>月2回の相談で、迷いのない練習を。</h2>
-            <p class="pricing-intro">
-                前田プロのオンラインスイングレッスンは、LINEだけで完結する新しいレッスンサービスです。<br>
-                困ったときにすぐ相談でき、効率的に上達するために「必要十分なペース」として月2回の相談を基本としています。
-            </p>
-            <div class="pricing-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>プラン名</th>
-                            <th>内容</th>
-                            <th class="premium">月額料金</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>ベーシック</strong></td>
-                            <td>月2回のLINE相談</td>
-                            <td><strong class="price-highlight">2,000円（税込）</strong></td>
-                        </tr>
-                        <tr>
-                            <td class="premium">
-                                <strong>プレミアム</strong>
-                                <span class="premium-badge">おすすめ</span>
-                            </td>
-                            <td>月2回のLINE相談＋骨格分析</td>
-                            <td><strong class="price-highlight">3,000円（税込）</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="container">
+        <h2>月2回の相談で、迷いのない練習を。</h2>
+        <p class="pricing-intro">
+            前田プロのオンラインスイングレッスンは、LINEだけで完結する新しいレッスンサービスです。<br>
+            困ったときにすぐ相談でき、効率的に上達するために「必要十分なペース」として月2回の相談を基本としています。
+        </p>
+        <div class="pricing-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>プラン名</th>
+                        <th>内容</th>
+                        <th>月額料金</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ベーシック</strong></td>
+                        <td>月2回のLINE相談</td>
+                        <td><strong class="price-highlight">2,000円（税込）</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="premium">
+                            <strong>プレミアム</strong>
+                            <span class="premium-badge">おすすめ</span>
+                        </td>
+                        <td>月2回のLINE相談＋骨格分析</td>
+                        <td><strong class="price-highlight">3,000円（税込）</strong></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- 比較表 -->
     <section class="comparison">
@@ -1065,7 +1186,7 @@
         <div class="credentials-content">
             <div class="profile">
                 <div class="profile-image">
-                 <img src="images/maeda2-pro.jpg" alt="前田プロ" style="max-width:100%; height:auto;">
+                 <img src="images/maeda2-pro.jpg.jpg" alt="前田プロ" style="max-width:100%; height:auto;">
                     <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">※前田プロの写真に差し替え予定</p>
                 </div>
                 <h3>前田倫志 プロフィール</h3>
@@ -1076,6 +1197,7 @@
                     <li>中部オープンや各地のオープン大会に出場</li>
                     <li>研修生時代から6年以上のレッスン経験</li>
                     <li>これまでに1000人以上を直接指導し、多くのゴルファーの上達をサポート</li>
+<li>現在も現役ツアープロとして、大会に出場中</li>
                 </ul>
             </div>
         </div>
